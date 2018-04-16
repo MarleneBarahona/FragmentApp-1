@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
     TextView text;
+    TextView des;
     ImageView imageS;
 
     @Override
@@ -16,6 +17,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         //colocando los id del textview e imageview en las variables
         text = findViewById(R.id.textId);
+        des = findViewById(R.id.text2);
         imageS = findViewById(R.id.imgId);
 
         Intent callingIntent = getIntent();
@@ -33,14 +35,16 @@ public class Main2Activity extends AppCompatActivity {
     private void handleReceivedText(Intent intent){
 
         //creando objeto
-        Dragones sailor = (Dragones)intent.getSerializableExtra("SAILOR");
+        Dragones dragon = (Dragones)intent.getSerializableExtra("DRAGON");
 
         //condicion para que aparezca el string e imagen
         if (text != null) {
-            text.setText(sailor.getname());
+            text.setText(dragon.getname());
+        } if (des != null) {
+            des.setText(dragon.getdes());
         }
         if (imageS != null){
-            imageS.setImageResource(sailor.getimg());
+            imageS.setImageResource(dragon.getimg());
         }
     }
 }

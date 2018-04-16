@@ -9,10 +9,12 @@ import java.io.Serializable;
 public class Dragones implements Serializable {
     private int img;
     private String name;
+    private String des;
 
     //constructor
-    public Dragones(String name, int pos_imagen){
+    public Dragones(String name, String des, int pos_imagen){
         this.name = name;
+        this.des= des;
 
         //tomando los recursos de drawable
         if(pos_imagen==0){
@@ -53,4 +55,8 @@ public class Dragones implements Serializable {
     public String getname() {
         return name;
     }
+    public String getdes() {
+        return des;
+    }
+
 }

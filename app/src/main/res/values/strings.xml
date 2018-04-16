@@ -12,4 +12,26 @@
         <item>Rompe viento</item>
         <item>Escarabajo</item>
     </string-array>
+    <string-array name="des">
+        <item>No registrado</item>
+        <item>Albondiga</item>
+        <item>Tormenta</item>
+        <item>Chimuelo</item>
+        <item>Vomito y Erupto</item>
+        <item>Colmillo</item>
+        <item>No registrado</item>
+        <item>No registrado</item>
+        <item>No registrado</item>
+    </string-array>
+    <string-array name="Domadores">
+        <item>No registrado</item>
+        <item>Dragon de Patapez Ingerman</item>
+        <item>Dragon de Astrid Hofersson</item>
+        <item>Dragon de Hipo Abadejo III</item>
+        <item>Dragon de Brutacio y Bruthilda Thorston</item>
+        <item>Dragon de Patan Mocoso</item>
+        <item>1-Dragon de Valka, alfa del Santuario \ 2-Dragon de Draco</item>
+        <item>Dragon de Valka</item>
+        <item>No registrado</item>
+    </string-array>
 </resources>

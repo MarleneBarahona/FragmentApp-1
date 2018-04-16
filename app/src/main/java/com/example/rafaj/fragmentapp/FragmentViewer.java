@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 public class FragmentViewer extends Fragment {
     TextView text;
+    TextView des;
     ImageView imageS;
 
     @Override
@@ -23,16 +24,18 @@ public class FragmentViewer extends Fragment {
 
         //colocando los id del textview e imageview en las variables
         text = view.findViewById(R.id.textId);
+        des = view.findViewById(R.id.text2);
         imageS = view.findViewById(R.id.imgId);
         Bundle bundle = this.getArguments();
 
         if(bundle != null){
             //creando objeto
-            Dragones sailor = (Dragones)bundle.getSerializable("SAILOR");
-            Toast.makeText(getActivity(), "Item: " + sailor.getname(), Toast.LENGTH_SHORT).show();
+            Dragones dragon = (Dragones)bundle.getSerializable("SAILOR");
+            Toast.makeText(getActivity(), "Item: " + dragon.getname(), Toast.LENGTH_SHORT).show();
             //setenando string e imagen
-            text.setText(sailor.getname());
-            imageS.setImageResource(sailor.getimg());
+            text.setText(dragon.getname());
+            des.setText(dragon.getdes());
+            imageS.setImageResource(dragon.getimg());
         }
 
         return view;
