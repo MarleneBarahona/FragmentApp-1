@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+import java.io.Serializable;
 
 /**
  * Created by rafaj on 8/4/2018.
@@ -19,39 +20,42 @@ import android.widget.Toast;
 
 public class FragmentList extends ListFragment implements AdapterView.OnItemClickListener{
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list_fragment, container, false);
         return view;
     }
 
-
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Planets, android.R.layout.simple_list_item_1);
+                R.array.Especie, android.R.layout.simple_list_item_1);
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
     }
-
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
+        //creando el objeto
+        Dragones dragones = new Dragones(adapterView.getItemAtPosition(i).toString(),i);
+
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             Intent newIntent = new Intent(getActivity().getApplicationContext(), Main2Activity.class);
             newIntent.setAction(Intent.ACTION_SEND);
+            //aplicando intent en objeto
+            newIntent.putExtra("SAILOR", dragones);
             newIntent.setType("text/plain");
-            newIntent.putExtra(Intent.EXTRA_TEXT, adapterView.getItemAtPosition(i).toString());
             startActivity(newIntent);
+
         }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
             Bundle bundle = new Bundle();
-            bundle.putString("KEY", adapterView.getItemAtPosition(i).toString());
+            //bundle en objeto
+            bundle.putSerializable("SAILOR", dragones);
             FragmentViewer frag = new FragmentViewer();
             frag.setArguments(bundle);
 
@@ -61,8 +65,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             fragmentTransaction.replace(R.id.viewer, frag);
             fragmentTransaction.commit();
         }
-
-
-
     }
+
 }
+

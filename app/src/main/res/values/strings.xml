@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">FragmentApp</string>
 
-    <string-array name="Planets">
-        <item>Sun</item>
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string-array name="Especie">
+        <item>Terror terrible</item>
+        <item>Gronckle</item>
+        <item>Nadder mortifero</item>
+        <item>Furia nocturna</item>
+        <item>Cremallerus espantosus</item>
+        <item>Pesadilla nocturna</item>
+        <item>Salvajibestia</item>
+        <item>Rompe viento</item>
+        <item>Escarabajo</item>
     </string-array>
 </resources>
