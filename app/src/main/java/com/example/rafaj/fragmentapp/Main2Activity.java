@@ -9,15 +9,16 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity {
     TextView text;
     TextView des;
+    TextView ejemplar;
     ImageView imageS;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         //colocando los id del textview e imageview en las variables
         text = findViewById(R.id.textId);
-        des = findViewById(R.id.text2);
+        ejemplar = findViewById(R.id.text2);
+        des = findViewById(R.id.text3);
         imageS = findViewById(R.id.imgId);
 
         Intent callingIntent = getIntent();
@@ -42,6 +43,8 @@ public class Main2Activity extends AppCompatActivity {
             text.setText(dragon.getname());
         } if (des != null) {
             des.setText(dragon.getdes());
+        } if (ejemplar != null) {
+            ejemplar.setText(dragon.getEjemplar());
         }
         if (imageS != null){
             imageS.setImageResource(dragon.getimg());

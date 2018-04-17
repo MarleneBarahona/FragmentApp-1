@@ -40,13 +40,13 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
         //Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
         //creando el objeto
-        Dragones dragones = new Dragones(adapterView.getItemAtPosition(i).toString(), adapterView.getItemAtPosition(i).toString(),i);
+        Dragones dragones = new Dragones(adapterView.getItemAtPosition(i).toString() ,i);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
             Intent newIntent = new Intent(getActivity().getApplicationContext(), Main2Activity.class);
             newIntent.setAction(Intent.ACTION_SEND);
             //aplicando intent en objeto
-            newIntent.putExtra("SAILOR", dragones);
+            newIntent.putExtra("DRAGON", dragones);
             newIntent.setType("text/plain");
             startActivity(newIntent);
 
@@ -55,7 +55,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
 
             Bundle bundle = new Bundle();
             //bundle en objeto
-            bundle.putSerializable("SAILOR", dragones);
+            bundle.putSerializable("DRAGON", dragones);
             FragmentViewer frag = new FragmentViewer();
             frag.setArguments(bundle);
 
