@@ -24,7 +24,7 @@ public class FragmentViewer extends Fragment {
         View view = inflater.inflate(R.layout.viewer_fragment, container, false);
 
         //colocando los id del textview e imageview en las variables
-        text = view.findViewById(R.id.textId);
+        text = view.findViewById(R.id.text1);
         ejemplar = view.findViewById(R.id.text2);
         des = view.findViewById(R.id.text3);
         imageS = view.findViewById(R.id.imgId);

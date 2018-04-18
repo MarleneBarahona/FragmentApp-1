@@ -16,7 +16,7 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         //colocando los id del textview e imageview en las variables
-        text = findViewById(R.id.textId);
+        text = findViewById(R.id.text1);
         ejemplar = findViewById(R.id.text2);
         des = findViewById(R.id.text3);
         imageS = findViewById(R.id.imgId);

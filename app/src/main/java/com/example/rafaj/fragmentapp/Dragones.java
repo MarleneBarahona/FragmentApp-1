@@ -64,16 +64,16 @@ public class Dragones implements Serializable {
         }
     }
 
-    //getters para img
+    //getter para img
     public int getimg() {
         return img;
     }
 
-    //getters para name
+    //getter para name
     public String getname() {
         return name;
     }
-    //getters para des
+    //getter para des
     public String getdes() {
         return domador;
     }
@@ -81,5 +81,4 @@ public class Dragones implements Serializable {
     public String getEjemplar() {
         return ejemplar;
     }
-
 }

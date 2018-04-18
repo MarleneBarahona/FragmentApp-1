@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FragmentApp</string>
+    <string name="app_name">DragonesApp</string>
 
     <string-array name="Especie">
         <item>Terror terrible</item>
